@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sellia</title>
+  <link rel="stylesheet" href="sellia.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+
+  <!-- Particle Background with Fallback -->
+  <div id="particles-js"></div>
+
+  <header class="animate_animated animate_fadeInDown">
+    <div class="container header-container">
+      <div class="logo">
+        <div class="logo-icon"></div>
+        <span>Sellia</span>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#join">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero animate_animated animate_fadeIn">
+      <div class="container">
+        <h1 class="animate_animated animatefadeInUp animate_delay-1s">Grow Smarter with Sellia</h1>
+        <p class="animate_animated animatefadeInUp animate_delay-1s">
+          Connect with top marketers and boost your sales through Egypt's smartest affiliate network. Zero risk. Pure results.
+        </p>
+        <a href="#join" class="btn animate_animated animatefadeInUp animate_delay-2s">Start Collaborating</a>
+      </div>
+    </section>
+
+    <section id="about" class="section animate_animated animate_fadeIn">
+      <div class="container">
+        <h2>What is Sellia?</h2>
+        <p>
+          Sellia is a performance-driven affiliate marketing system that connects retail stores with a curated network of digital marketers specialized in selling electronics to high-intent buyers.<br><br>
+          We deliver measurable, real-world results—zero risks, pure results. Our model is simple: you only pay a commission after a confirmed sale, ensuring full alignment between your goals and ours.<br><br>
+          With Sellia, you're not hiring an agency—you're gaining a reliable sales partner. We operate with full transparency, structured systems, and a focus on optimizing every transaction to maximize your store's revenue.
+        </p>
+      </div>
+    </section>
+
+    <section id="services" class="section animate_animated animate_fadeIn">
+      <div class="container">
+        <h2>Our Core Features</h2>
+        <div class="features-grid">
+          <div class="feature-card animate_animated animate_fadeInUp">
+            <h3>Affiliate Network</h3>
+            <p>We recruit skilled digital marketers ready to promote your products across social media, blogs, and various digital platforms.</p>
+          </div>
+          <div class="feature-card animate_animated animatefadeInUp animate_delay-1s">
+            <h3>Smart Protection System</h3>
+            <p>Our advanced tracking technology guarantees fair commissions with complete transparency. Every sale is meticulously recorded and verified.</p>
+          </div>
+          <div class="feature-card animate_animated animatefadeInUp animate_delay-2s">
+            <h3>Zero Setup Cost</h3>
+            <p>No upfront cost for joining. You only pay a commission when we deliver real, confirmed sales.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="section animate_animated animate_fadeIn">
+      <div class="container">
+        <h2>Join Our Network</h2>
+        <p>Whether you're an established electronics retailer or a talented marketer, Sellia provides the perfect platform to maximize your potential.</p>
+        <a href="mailto:sellia.eg@gmail.com" class="btn animate_animated animatepulse animate_infinite">Get in Touch</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="animate_animated animate_fadeIn">
+    <div class="container">
+      © 2025 Sellia. All Rights Reserved. Founded by <b>Marwan Ehab</b>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Initialize Particles with performance optimizations
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.particlesJS) {
+        particlesJS("particles-js", {
+          particles: {
+            number: { 
+              value: 60,
+              density: { 
+                enable: true,
+                value_area: 800 
+              } 
+            },
+            color: { value: "#4a6fa5" },
+            shape: { type: "circle" },
+            opacity: { 
+              value: 0.3,
+              random: true 
+            },
+            size: { 
+              value: 3,
+              random: true 
+            },
+            line_linked: { 
+              enable: false // Disabled for better performance
+            },
+            move: { 
+              enable: true,
+              speed: 1.5, // Reduced speed
+              direction: "none",
+              random: true,
+              straight: false,
+              out_mode: "out" 
+            }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { 
+                enable: true,
+                mode: "bubble" // Lighter than 'grab'
+              },
+              onclick: { 
+                enable: false // Disabled for mobile
+              }
+            }
+          }
+        });
+      }
+      
+      // Fallback if particles fail to load
+      setTimeout(() => {
+        if (!window.particlesJS) {
+          document.getElementById('particles-js').style.display = 'none';
+        }
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
